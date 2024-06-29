@@ -1,0 +1,14 @@
+- name: "TROJAN-WS"
+  server: SERVER AKUN/BUG CDN CLOUDFLARE
+  port: 443
+  type: trojan
+  password: PASSWORD
+  tls: true
+  skip-cert-verify: false
+  sni: SERVER AKUN/ BUG SNI
+  network: ws
+  ws-opts:
+    path: /buy-trojan-ws-pm-telegram-at-synricha 
+    headers:
+      Host: SERVER AKUN/ BUG SNI
+  udp: true
