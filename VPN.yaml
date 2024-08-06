@@ -13,3 +13,20 @@ proxies:
       headers:
         Host: SERVER AKUN/ BUG SNI
     udp: true
+
+- name: "VMESS-WS"
+  type: vmess
+  server: SERVER AKUN/BUG CDN CLOUDFLARE
+  port: 443
+  uuid: UUID
+  alterId: 0
+  cipher: none
+  tls: true
+  skip-cert-verify: false
+  servername: SERVER AKUN/ BUG SNI
+  network: ws
+  ws-opts:
+    path: /buy-vmess-ws-pm-telegram-at-synricha
+    headers:
+      Host: SERVER AKUN/ BUG SNI
+  udp: true
