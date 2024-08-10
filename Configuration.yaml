@@ -1,0 +1,187 @@
+port: 7890
+socks-port: 7891
+redir-port: 7892
+mixed-port: 7893
+tproxy-port: 7895
+ipv6: false
+mode: rule
+log-level: silent
+allow-lan: true
+external-controller: 0.0.0.0:9090
+secret: ""
+bind-address: "*"
+unified-delay: true
+profile:
+  store-selected: true
+dns:
+  enable: true
+  ipv6: false
+  enhanced-mode: redir-host
+  listen: 0.0.0.0:7874
+  nameserver:
+    - 8.8.8.8
+    - 1.0.0.1
+    - https://dns.google/dns-query
+  fallback:
+    - 1.1.1.1
+    - 8.8.4.4
+    - https://cloudflare-dns.com/dns-query
+    - 112.215.203.254
+  default-nameserver:
+    - 8.8.8.8
+    - 1.1.1.1
+    - 112.215.203.254
+#____________________PROXIES____________________#
+proxies:
+#1
+  - name: Dewi_VVIP
+    server: quiz.vidio.com
+    port: 443
+    type: vmess
+    uuid: 3bb05ddd-ac7f-402f-8ad9-5fb110ca1da2
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: atp.sing-box.id
+    network: ws
+    ws-opts:
+      path: /buy-vmess-ws-pm-telegram-at-synricha
+      headers:
+        Host: atp.sing-box.id
+    udp: true
+   
+#2
+  - name: Dewi_VIP
+    server: quiz.int.vidio.com
+    port: 80
+    type: vmess
+    uuid: 3bb05ddd-ac7f-402f-8ad9-5fb110ca1da2
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    servername: atp.sing-box.id
+    network: ws
+    ws-opts:
+      path: /buy-vmess-ws-pm-telegram-at-synricha
+      headers:
+        Host: atp.sing-box.id
+    udp: true
+    
+#_______________PROXY GROUPS_______________#
+proxy-groups:
+  - name: GLOBAL✅
+    type: select
+    proxies:
+      - BALANCE
+      - SOSMED
+      - STREAMING
+      - DIRECT
+  - name: BALANCE
+    type: load-balance
+    strategy: consistent-hashing
+    url: http://hi.bonds.id/ping
+    interval: 300
+    proxies:
+      - Dewi_VVIP
+      - Dewi_VIP
+  - name: SOSMED
+    type: url-test
+    url: http://hi.bonds.id/ping
+    interval: 300
+    tolerance: 50
+    proxies:
+      - Dewi_VVIP
+      - Dewi_VIP
+  - name: STREAMING
+    type: select
+    proxies:
+      - BALANCE
+      - Dewi_VVIP
+      - Dewi_VIP
+  - name: 18+
+    type: select
+    proxies:
+      - BALANCE
+      - REJECT
+      
+rules:
+  - DOMAIN-SUFFIX,messenger.com,SOSMED
+  - DOMAIN-SUFFIX,facebook.com,SOSMED
+  - DOMAIN-SUFFIX,facebook.net,SOSMED
+  - DOMAIN-SUFFIX,fb.com,SOSMED
+  - DOMAIN-SUFFIX,fb.me,SOSMED
+  - DOMAIN-SUFFIX,fbaddins.com,SOSMED
+  - DOMAIN-SUFFIX,fbcdn.net,SOSMED
+  - DOMAIN-SUFFIX,fbsbx.com,SOSMED
+  - DOMAIN-SUFFIX,fbworkmail.com,SOSMED
+  - DOMAIN-SUFFIX,facebookmail.com,SOSMED
+  - IP-CIDR,157.240.0.0/16,SOSMED
+  - IP-CIDR,103.4.96.0/22,SOSMED
+  - IP-CIDR,129.134.0.0/17,SOSMED
+  - IP-CIDR,157.240.0.0/17,SOSMED
+  - IP-CIDR,173.252.64.0/19,SOSMED
+  - IP-CIDR,173.252.96.0/19,SOSMED
+  - IP-CIDR,179.60.192.0/22,SOSMED
+  - IP-CIDR,185.60.216.0/22,SOSMED
+  - IP-CIDR,204.15.20.0/22,SOSMED
+  - IP-CIDR,31.13.24.0/21,SOSMED
+  - IP-CIDR,31.13.64.0/18,SOSMED
+  - IP-CIDR,45.64.40.0/22,SOSMED
+  - IP-CIDR,66.220.144.0/20,SOSMED
+  - IP-CIDR,69.171.224.0/19,SOSMED
+  - IP-CIDR,69.63.176.0/20,SOSMED
+  - IP-CIDR,74.119.76.0/22,SOSMED
+# Telegram
+  - DOMAIN-SUFFIX,telegra.ph,SOSMED
+  - DOMAIN-SUFFIX,telegram.org,SOSMED
+  - DOMAIN-SUFFIX,t.me,SOSMED
+  - DOMAIN-SUFFIX,tdesktop.com,SOSMED
+  - DOMAIN-SUFFIX,telegram.me,SOSMED
+  - DOMAIN-SUFFIX,telesco.pe,SOSMED
+  - IP-CIDR,91.108.4.0/22,SOSMED
+  - IP-CIDR,91.108.8.0/22,SOSMED
+  - IP-CIDR,91.108.12.0/22,SOSMED
+  - IP-CIDR,91.108.16.0/22,SOSMED
+  - IP-CIDR,91.108.20.0/22,SOSMED
+  - IP-CIDR,91.108.56.0/22,SOSMED
+  - IP-CIDR,149.154.160.0/20,SOSMED
+
+# > Youtube
+  - DOMAIN-SUFFIX,googlevideo.com,STREAMING
+  - DOMAIN-SUFFIX,video.google.com,STREAMING
+  - DOMAIN-SUFFIX,youtu.be,STREAMING
+  - DOMAIN-SUFFIX,youtube-nocookie.com,STREAMING
+  - DOMAIN-SUFFIX,youtube-ui.l.google.com,STREAMING
+  - DOMAIN-SUFFIX,youtube.com,STREAMING
+  - DOMAIN-SUFFIX,youtube.googleapis.com,STREAMING
+  - DOMAIN-SUFFIX,youtubeeducation.com,STREAMING
+  - DOMAIN-SUFFIX,youtubeembeddedplayer.googleapis.com,STREAMING
+  - DOMAIN-SUFFIX,youtubei.googleapis.com,STREAMING
+  - DOMAIN-SUFFIX,youtubekids.com,STREAMING
+  - DOMAIN-SUFFIX,yt.be,STREAMING
+  - DOMAIN-SUFFIX,yt3.ggpht.com,STREAMING
+  - DOMAIN-SUFFIX,ytimg.com,STREAMING
+  - DOMAIN-SUFFIX,googleapis.com,STREAMING
+  - DOMAIN-SUFFIX,gstatic.com,STREAMING
+  - DOMAIN-SUFFIX,google.com,STREAMING
+  - DOMAIN-SUFFIX,googleusercontent.com,STREAMING
+  - DOMAIN-SUFFIX,gvt1.com,STREAMING
+  - IP-CIDR,74.125.24.188/16,STREAMING
+  - IP-CIDR,172.217.194.188/16,STREAMING
+  - IP-CIDR,142.250.4.188/16,STREAMING
+
+#pornhub-------------------------------------------------------------------------------
+  - DOMAIN-SUFFIX,phncdn.com,18+
+  - DOMAIN-SUFFIX,phprcdn.com,18+
+  - DOMAIN-SUFFIX,porngub.com,18+
+  - DOMAIN-SUFFIX,pornhub-deutsch.net,18+
+  - DOMAIN-SUFFIX,pornhubapparel.com,18+
+  - DOMAIN-SUFFIX,pornhub.com,18+
+  - DOMAIN-SUFFIX,pornhub.org,18+
+  - DOMAIN-SUFFIX,pornhubpremium.com,18+
+  - DOMAIN-SUFFIX, xnxx.com, 18+
+  - DOMAIN-SUFFIX, xhamster.com, 18+
+  - MATCH, GLOBAL✅
+  
