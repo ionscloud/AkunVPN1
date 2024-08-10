@@ -54,8 +54,8 @@
       },
       {
         "domain_suffix": [
-          "as983.sing-box.id",
-          "as983.sing-box.id"
+          "atp.sing-box.id",
+          "atp.sing-box.id"
         ],
         "server": "direct-dns",
         "rewrite_ttl": 20
@@ -150,7 +150,7 @@
       },
       "tls": {
         "enabled": true,
-        "server_name": "quiz.vidio.com.as983.sing-box.id",
+        "server_name": "quiz.vidio.com.atp.sing-box.id",
         "insecure": true,
         "disable_sni": false
       },
@@ -158,7 +158,7 @@
         "type": "ws",
         "path": "/buy-vmess-ws-pm-telegram-at-synricha",
         "headers": {
-          "Host": "quiz.vidio.com.as983.sing-box.id"
+          "Host": "quiz.vidio.com.atp.sing-box.id"
         },
         "max_early_data": 0,
         "early_data_header_name": "Sec-WebSocket-Protocol"
@@ -184,7 +184,7 @@
         "type": "ws",
         "path": "/buy-vmess-ws-pm-telegram-at-synricha",
         "headers": {
-          "Host": "quiz.int.vidio.com.as983.sing-box.id"
+          "Host": "quiz.int.vidio.com.atp.sing-box.id"
         },
         "max_early_data": 0,
         "early_data_header_name": "Sec-WebSocket-Protocol"
