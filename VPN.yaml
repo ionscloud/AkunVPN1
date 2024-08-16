@@ -14,19 +14,19 @@ proxies:
         Host: support.zoom.us.as983.sing-box.id.
     udp: true
 
-- name: "VMESS-WS"
-  type: vmess
-  server: support.zoom.us
-  port: 443
-  uuid: c343e8fa-edf9-4d45-8975-2cbbe463087a
-  alterId: 0
-  cipher: none
-  tls: true
-  skip-cert-verify: false
-  servername: support.zoom.us.as983.sing-box.id
-  network: ws
-  ws-opts:
-    path: /buy-vmess-ws-pm-telegram-at-synricha
-    headers:
-      Host: support.zoom.us.as983.sing-box.id
-  udp: true
+  - name: "VMESS-WS"
+    type: vmess
+    server: support.zoom.us
+    port: 443
+    uuid: c343e8fa-edf9-4d45-8975-2cbbe463087a
+    alterId: 0
+    cipher: none
+    tls: true
+    skip-cert-verify: false
+    servername: support.zoom.us.as983.sing-box.id
+    network: ws
+    ws-opts:
+      path: /buy-vmess-ws-pm-telegram-at-synricha
+      headers:
+        Host: support.zoom.us.as983.sing-box.id
+    udp: true
