@@ -1,32 +1,32 @@
 proxies:
   - name: "TROJAN-WS"
-    server: SERVER AKUN/BUG CDN CLOUDFLARE
+    server: support.zoom.us
     port: 443
     type: trojan
-    password: PASSWORD
+    password: 743da7f26d8ebb05
     tls: true
     skip-cert-verify: false
-    sni: SERVER AKUN/ BUG SNI
+    sni: support.zoom.us.as983.sing-box.id.
     network: ws
     ws-opts:
       path: /buy-trojan-ws-pm-telegram-at-synricha 
       headers:
-        Host: SERVER AKUN/ BUG SNI
+        Host: support.zoom.us.as983.sing-box.id.
     udp: true
 
 - name: "VMESS-WS"
   type: vmess
-  server: SERVER AKUN/BUG CDN CLOUDFLARE
+  server: support.zoom.us
   port: 443
-  uuid: UUID
+  uuid: c343e8fa-edf9-4d45-8975-2cbbe463087a
   alterId: 0
   cipher: none
   tls: true
   skip-cert-verify: false
-  servername: SERVER AKUN/ BUG SNI
+  servername: support.zoom.us.as983.sing-box.id
   network: ws
   ws-opts:
     path: /buy-vmess-ws-pm-telegram-at-synricha
     headers:
-      Host: SERVER AKUN/ BUG SNI
+      Host: support.zoom.us.as983.sing-box.id
   udp: true
