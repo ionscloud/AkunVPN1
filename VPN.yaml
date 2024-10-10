@@ -1,32 +1,17 @@
 proxies:
-  - name: "TROJAN-WS"
-    server: support.zoom.us
-    port: 443
-    type: trojan
-    password: 743da7f26d8ebb05
-    tls: true
-    skip-cert-verify: false
-    sni: support.zoom.us.as983.sing-box.id.
-    network: ws
-    ws-opts:
-      path: /buy-trojan-ws-pm-telegram-at-synricha 
-      headers:
-        Host: support.zoom.us.as983.sing-box.id.
-    udp: true
-
-  - name: "VMESS-WS"
+  - name: "ATP"
     type: vmess
-    server: support.zoom.us
+    server: quiz.vidio.com
     port: 443
-    uuid: c343e8fa-edf9-4d45-8975-2cbbe463087a
+    uuid: c6a1ca05-7d84-42fd-b9c3-29173ebf46e5
     alterId: 0
     cipher: none
     tls: true
     skip-cert-verify: false
-    servername: support.zoom.us.as983.sing-box.id
+    servername: atp.sing-box.id
     network: ws
     ws-opts:
       path: /buy-vmess-ws-pm-telegram-at-synricha
       headers:
-        Host: support.zoom.us.as983.sing-box.id
+        Host: atp.sing-box.id
     udp: true
