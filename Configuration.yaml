@@ -34,41 +34,37 @@ dns:
 #____________________PROXIES____________________#
 proxies:
 #1
-  - name: Dewi_VVIP
-    server: quiz.vidio.com
+  - name: 🇸🇬 VVIP
+    type: vless
+    server: www.udemy.com
     port: 443
-    type: vmess
-    uuid: 3bb05ddd-ac7f-402f-8ad9-5fb110ca1da2
-    alterId: 0
-    cipher: auto
+    uuid: vlesspremiumserver
+    network: ws
+    servername: idc.hariyono.my.id
+    skip-cert-verify: true
+    udp: true
     tls: true
-    skip-cert-verify: true
-    servername: atp.sing-box.id
-    network: ws
     ws-opts:
-      path: /buy-vmess-ws-pm-telegram-at-synricha
+      path: /vless
       headers:
-        Host: atp.sing-box.id
-    udp: true
-   
+        Host: idc.hariyono.my.id
+
 #2
-  - name: Dewi_VIP
-    server: quiz.int.vidio.com
-    port: 80
-    type: vmess
-    uuid: 3bb05ddd-ac7f-402f-8ad9-5fb110ca1da2
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    servername: atp.sing-box.id
+  - name: 🇸🇬 VIP
+    type: vless
+    server: www.udemy.com
+    port: 443
+    uuid: vlesspremiumserver
     network: ws
-    ws-opts:
-      path: /buy-vmess-ws-pm-telegram-at-synricha
-      headers:
-        Host: atp.sing-box.id
+    servername: idc.hariyono.my.id
+    skip-cert-verify: true
     udp: true
-    
+    tls: true
+    ws-opts:
+      path: /vless
+      headers:
+        Host: idc.hariyono.my.id
+
 #_______________PROXY GROUPS_______________#
 proxy-groups:
   - name: GLOBAL✅
@@ -84,22 +80,22 @@ proxy-groups:
     url: http://hi.bonds.id/ping
     interval: 300
     proxies:
-      - Dewi_VVIP
-      - Dewi_VIP
+      - 🇸🇬 VVIP
+      - 🇸🇬 VIP
   - name: SOSMED
     type: url-test
     url: http://hi.bonds.id/ping
     interval: 300
     tolerance: 50
     proxies:
-      - Dewi_VVIP
-      - Dewi_VIP
+      - 🇸🇬 VVIP
+      - 🇸🇬 VIP
   - name: STREAMING
     type: select
     proxies:
       - BALANCE
-      - Dewi_VVIP
-      - Dewi_VIP
+      - 🇸🇬 VVIP
+      - 🇸🇬 VIP
   - name: 18+
     type: select
     proxies:
