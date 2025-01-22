@@ -64,7 +64,8 @@ proxies:
       path: /vless
       headers:
         Host: ions.my.id
-
+        
+#3
   - name: 🇸🇬 VIP
     type: vless
     server: www.udemy.com
@@ -92,7 +93,7 @@ proxy-groups:
   - name: BALANCE
     type: load-balance
     strategy: consistent-hashing
-    url: http://hi.bonds.id/ping
+    url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
       - 🇸🇬 VVIP PRO
@@ -100,7 +101,7 @@ proxy-groups:
       - 🇸🇬 VIP
   - name: SOSMED
     type: url-test
-    url: http://hi.bonds.id/ping
+    url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
