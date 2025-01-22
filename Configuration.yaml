@@ -34,7 +34,7 @@ dns:
 #____________________PROXIES____________________#
 proxies:
 #1
-  - name: 🇸🇬 VVIP
+  - name: 🇸🇬 VVIP PRO
     type: vless
     server: www.udemy.com
     port: 443
@@ -50,21 +50,36 @@ proxies:
         Host: idc.hariyono.my.id
 
 #2
-  - name: 🇸🇬 VIP
+  - name: 🇸🇬 VVIP
     type: vless
     server: www.udemy.com
     port: 443
     uuid: vlesspremiumserver
     network: ws
-    servername: idc.hariyono.my.id
+    servername: ions.my.id
     skip-cert-verify: true
     udp: true
     tls: true
     ws-opts:
       path: /vless
       headers:
-        Host: idc.hariyono.my.id
+        Host: ions.my.id
 
+  - name: 🇸🇬 VIP
+    type: vless
+    server: www.udemy.com
+    port: 443
+    uuid: vlesspremiumserver
+    network: ws
+    servername: ions-do.zidstore.id
+    skip-cert-verify: true
+    udp: true
+    tls: true
+    ws-opts:
+      path: /vless
+      headers:
+        Host: ions-do.zidstore.id
+        
 #_______________PROXY GROUPS_______________#
 proxy-groups:
   - name: GLOBAL✅
@@ -80,6 +95,7 @@ proxy-groups:
     url: http://hi.bonds.id/ping
     interval: 300
     proxies:
+      - 🇸🇬 VVIP PRO
       - 🇸🇬 VVIP
       - 🇸🇬 VIP
   - name: SOSMED
@@ -88,12 +104,14 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
+      - 🇸🇬 VVIP PRO
       - 🇸🇬 VVIP
       - 🇸🇬 VIP
   - name: STREAMING
     type: select
     proxies:
       - BALANCE
+      - 🇸🇬 VVIP PRO
       - 🇸🇬 VVIP
       - 🇸🇬 VIP
   - name: 18+
