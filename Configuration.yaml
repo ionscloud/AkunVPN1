@@ -36,50 +36,50 @@ proxies:
 #1
   - name: 🇸🇬 VVIP PRO
     type: vless
-    server: www.udemy.com
+    server: quiz.vidio.com
     port: 443
-    uuid: vlesspremiumserver
+    uuid: f8ccbd94-4bfa-400c-b947-a83b9cdf01e7
     network: ws
-    servername: idc.hariyono.my.id
+    servername: ikd.hariyono.my.id
     skip-cert-verify: true
     udp: true
     tls: true
     ws-opts:
       path: /vless
       headers:
-        Host: idc.hariyono.my.id
+        Host: ikd.hariyono.my.id
 
 #2
   - name: 🇸🇬 VVIP
     type: vless
-    server: www.udemy.com
+    server: quiz.int.vidio.com
     port: 443
-    uuid: vlesspremiumserver
+    uuid: f8ccbd94-4bfa-400c-b947-a83b9cdf01e7
     network: ws
-    servername: ions.my.id
+    servername: ikd.hariyono.my.id
     skip-cert-verify: true
     udp: true
     tls: true
     ws-opts:
       path: /vless
       headers:
-        Host: ions.my.id
+        Host: ikd.hariyono.my.id
         
 #3
   - name: 🇸🇬 VIP
     type: vless
-    server: www.udemy.com
+    server: quiz.int.vidio.com
     port: 443
-    uuid: vlesspremiumserver
+    uuid: f8ccbd94-4bfa-400c-b947-a83b9cdf01e7
     network: ws
-    servername: ions-do.zidstore.id
+    servername: quiz.int.vidio.com.ikd.hariyono.my.id
     skip-cert-verify: true
     udp: true
     tls: true
     ws-opts:
       path: /vless
       headers:
-        Host: ions-do.zidstore.id
+        Host: quiz.int.vidio.com.ikd.hariyono.my.id
         
 #_______________PROXY GROUPS_______________#
 proxy-groups:
