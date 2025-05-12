@@ -1,17 +1,14 @@
 proxies:
-  - name: "ATP"
-    type: vmess
+  - name: provide-cloud
     server: quiz.vidio.com
     port: 443
-    uuid: c6a1ca05-7d84-42fd-b9c3-29173ebf46e5
-    alterId: 0
-    cipher: none
-    tls: true
-    skip-cert-verify: false
-    servername: atp.sing-box.id
+    type: trojan
+    password: 75ccfee5-5fc2-48cd-830a-c29321ef5cba
+    skip-cert-verify: true
+    sni: ions-do.zidstore.id
     network: ws
     ws-opts:
-      path: /buy-vmess-ws-pm-telegram-at-synricha
+      path: /whatever/trojan-ws
       headers:
-        Host: atp.sing-box.id
+        Host: ions-do.zidstore.id
     udp: true
