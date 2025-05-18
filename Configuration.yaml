@@ -35,51 +35,48 @@ dns:
 proxies:
 #1
   - name: 🇸🇬 VVIP PRO
-    type: vless
     server: quiz.vidio.com
     port: 443
-    uuid: f8ccbd94-4bfa-400c-b947-a83b9cdf01e7
-    network: ws
-    servername: ikd.hariyono.my.id
+    type: trojan
+    password: 75ccfee5-5fc2-48cd-830a-c29321ef5cba
     skip-cert-verify: true
-    udp: true
-    tls: true
+    sni: ions-do.zidstore.id
+    network: ws
     ws-opts:
-      path: /vless
+      path: /whatever/trojan-ws
       headers:
-        Host: ikd.hariyono.my.id
+        Host: ions-do.zidstore.id
+    udp: true
 
 #2
   - name: 🇸🇬 VVIP
-    type: vless
-    server: quiz.int.vidio.com
+    server: quiz.vidio.com
     port: 443
-    uuid: f8ccbd94-4bfa-400c-b947-a83b9cdf01e7
-    network: ws
-    servername: ikd.hariyono.my.id
+    type: trojan
+    password: 75ccfee5-5fc2-48cd-830a-c29321ef5cba
     skip-cert-verify: true
-    udp: true
-    tls: true
+    sni: ions-do2.zidstore.id
+    network: ws
     ws-opts:
-      path: /vless
+      path: /whatever/trojan-ws
       headers:
-        Host: ikd.hariyono.my.id
+        Host: ions-do2.zidstore.id
+    udp: true
         
 #3
   - name: 🇸🇬 VIP
-    type: vless
-    server: quiz.int.vidio.com
+    server: quiz.vidio.com
     port: 443
-    uuid: f8ccbd94-4bfa-400c-b947-a83b9cdf01e7
-    network: ws
-    servername: quiz.int.vidio.com.ikd.hariyono.my.id
+    type: trojan
+    password: 75ccfee5-5fc2-48cd-830a-c29321ef5cba
     skip-cert-verify: true
-    udp: true
-    tls: true
+    sni: ions-do3.zidstore.id
+    network: ws
     ws-opts:
-      path: /vless
+      path: /whatever/trojan-ws
       headers:
-        Host: quiz.int.vidio.com.ikd.hariyono.my.id
+        Host: ions-do3.zidstore.id
+    udp: true
         
 #_______________PROXY GROUPS_______________#
 proxy-groups:
