@@ -194,4 +194,4 @@ rule-providers:
     interval: 86400
 rules:
   - RULE-SET,clash,REJECT
-  - MATCH,Akunb
+  - MATCH,Akun
