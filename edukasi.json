@@ -141,7 +141,7 @@
       "type": "trojan",
       "server": "www.udemy.com",
       "server_port": 443,
-      "password": "75ccfee5-5fc2-48cd-830a-c29321ef5cba",
+      "password": "1887c273-a510-4aa9-9e02-c65dd8ca3712",
       "tls": {
         "enabled": true,
         "server_name": "ions-do.zidstore.id",
@@ -170,7 +170,7 @@
       "type": "trojan",
       "server": "www.udemy.com",
       "server_port": 443,
-      "password": "75ccfee5-5fc2-48cd-830a-c29321ef5cba",
+      "password": "1887c273-a510-4aa9-9e02-c65dd8ca3712",
       "tls": {
         "enabled": true,
         "server_name": "ions-do2.zidstore.id",
@@ -199,7 +199,7 @@
       "type": "trojan",
       "server": "www.udemy.com",
       "server_port": 443,
-      "password": "021dacf9-04c0-473c-bf47-35bc2cb38f33",
+      "password": "1887c273-a510-4aa9-9e02-c65dd8ca3712",
       "tls": {
         "enabled": true,
         "server_name": "ions-do4.zidstore.id",
