@@ -120,28 +120,28 @@
       "tag": "Internet",
       "outbounds": [
         "Best Latency",
-        "🙉I",
-        "🙊II",
-        "🙈IV"
+        "VIDIO I",
+        "VIDIO II",
+        "VIDIO III"
       ]
     },
     {
       "type": "urltest",
       "tag": "Best Latency",
       "outbounds": [
-        "🙉I",
-        "🙊II",
-        "🙈IV"
+        "VIDIO I",
+        "VIDIO II",
+        "VIDIO III"
       ],
       "url": "https://detectportal.firefox.com/success.txt",
       "interval": "1m0s"
     },
     {
-     "tag": "🙉I",
+     "tag": "VIDIO I",
       "type": "trojan",
       "server": "quiz.vidio.com",
       "server_port": 443,
-      "password": "75ccfee5-5fc2-48cd-830a-c29321ef5cba",
+      "password": "1887c273-a510-4aa9-9e02-c65dd8ca3712",
       "tls": {
         "enabled": true,
         "server_name": "ions-do.zidstore.id",
@@ -166,11 +166,11 @@
       "domain_strategy": "ipv4_only"
     },
     {
-      "tag": "🙊II",
+      "tag": "VIDIO II",
       "type": "trojan",
       "server": "quiz.vidio.com",
       "server_port": 443,
-      "password": "75ccfee5-5fc2-48cd-830a-c29321ef5cba",
+      "password": "1887c273-a510-4aa9-9e02-c65dd8ca3712",
       "tls": {
         "enabled": true,
         "server_name": "ions-do2.zidstore.id",
@@ -195,11 +195,11 @@
       "domain_strategy": "ipv4_only"
     },
     {
-      "tag": "🙈IV",
+      "tag": "VIDIO III",
       "type": "trojan",
       "server": "quiz.vidio.com",
       "server_port": 443,
-      "password": "021dacf9-04c0-473c-bf47-35bc2cb38f33",
+      "password": "1887c273-a510-4aa9-9e02-c65dd8ca3712",
       "tls": {
         "enabled": true,
         "server_name": "ions-do4.zidstore.id",
