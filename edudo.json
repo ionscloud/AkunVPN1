@@ -34,7 +34,7 @@
       },
       {
         "tag": "direct-dns",
-        "address": "112.215.198.248",
+        "address": "local",
         "strategy": "ipv4_only",
         "detour": "direct"
       },
@@ -55,7 +55,8 @@
       {
         "domain_suffix": [
           "ions-do.zidstore.id",
-          "ions-do.zidstore.id"
+          "ions-do2.zidstore.id",
+          "ions-do4.zidstore.id"
         ],
         "server": "direct-dns",
         "rewrite_ttl": 20
@@ -119,26 +120,28 @@
       "tag": "Internet",
       "outbounds": [
         "Best Latency",
-        "🙉I",
-        "🙊II"
+        "care 1",
+        "ava 2",
+        "fb 4"
       ]
     },
     {
       "type": "urltest",
       "tag": "Best Latency",
       "outbounds": [
-        "🙉I",
-        "🙊II"
+        "care 1",
+        "ava 2",
+        "fb 4"
       ],
       "url": "https://detectportal.firefox.com/success.txt",
       "interval": "1m0s"
     },
     {
-     "tag": "🙉I",
+     "tag": "care 1",
       "type": "trojan",
       "server": "www.udemy.com",
       "server_port": 443,
-      "password": "936e8731-33e7-4971-ad72-b13fe0b6da06",
+      "password": "d1952fcb-3908-4a71-847b-e7f5b0a6dea6",
       "tls": {
         "enabled": true,
         "server_name": "ions-do.zidstore.id",
@@ -163,14 +166,14 @@
       "domain_strategy": "ipv4_only"
     },
     {
-      "tag": "🙊II",
+      "tag": "ava 2",
       "type": "trojan",
       "server": "www.udemy.com",
       "server_port": 443,
-      "password": "936e8731-33e7-4971-ad72-b13fe0b6da06",
+      "password": "d1952fcb-3908-4a71-847b-e7f5b0a6dea6",
       "tls": {
         "enabled": true,
-        "server_name": "ions-do.zidstore.id",
+        "server_name": "ions-do2.zidstore.id",
         "insecure": true,
         "utls": {
           "enabled": true,
@@ -181,7 +184,36 @@
         "type": "ws",
         "path": "/trojan-ws",
         "headers": {
-          "Host": "ions-do.zidstore.id"
+          "Host": "ions-do2.zidstore.id"
+        }
+      },
+      "multiplex": {
+        "enabled": false,
+        "protocol": "smux",
+        "max_streams": 32
+      },
+      "domain_strategy": "ipv4_only"
+    },
+    {
+      "tag": "fb 4",
+      "type": "trojan",
+      "server": "www.udemy.com",
+      "server_port": 443,
+      "password": "d1952fcb-3908-4a71-847b-e7f5b0a6dea6",
+      "tls": {
+        "enabled": true,
+        "server_name": "ions-do4.zidstore.id",
+        "insecure": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/trojan-ws",
+        "headers": {
+          "Host": "ions-do4.zidstore.id"
         }
       },
       "multiplex": {
