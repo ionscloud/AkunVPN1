@@ -138,7 +138,7 @@
       "type": "trojan",
       "server": "www.udemy.com",
       "server_port": 443,
-      "password": " 936e8731-33e7-4971-ad72-b13fe0b6da06",
+      "password": "936e8731-33e7-4971-ad72-b13fe0b6da06",
       "tls": {
         "enabled": true,
         "server_name": "ions-do.zidstore.id",
@@ -181,7 +181,7 @@
         "type": "ws",
         "path": "/trojan-ws",
         "headers": {
-          "Host": "ions-do2.zidstore.id"
+          "Host": "ions-do.zidstore.id"
         }
       },
       "multiplex": {
